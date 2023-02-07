@@ -1,0 +1,31 @@
+--Create a clothing store datatbase 
+
+CREATE TABLE clothes (id integer primary key, name text, size text, price integer, material text, quantity integer);
+
+INSERT into clothes VALUES (1, "shirt", "M", 20, "cotton", 54);
+INSERT into clothes values (2, "pants", "L", 50, "wool", 63 );
+INSERT into clothes values (3, "socks", "S", 15, "wool", 44);
+INSERT into clothes values (4, "belt", "M", 60, "leather", 10);
+INSERT into clothes values (5, "dress", "L", 40, "blend", 25);
+INSERT into clothes values (6, "tights", "S", 40, "nylon", 15); 
+INSERT into clothes values (7, "shoes", "L", 80, "leather", 8);
+INSERT into clothes values (8, "skirt", "M", 55, "cotton", 28);
+INSERT into clothes values (9, "hat", "L", 30, "wool", 31);
+INSERT into clothes values (10, "jacket", "L", 75, "cotton", 9);
+INSERT into clothes values (11, "sweater", "M", 60, "wool", 14);
+INSERT into clothes values (12, "sweatshirt", "S", 50, "cotton", 12);
+INSERT into clothes values (13, "scarf", "M", 20, "wool", 23);
+INSERT into clothes values (14, "coat", "L", 120, "cotton", 6);
+INSERT into clothes values (15, "mittens", "S", 10, "wool", 10);
+
+--Display the database 
+SELECT * FROM clothes;
+
+--Display the database ordered by price 
+SELECT * FROM clothes ORDER BY price asc;
+
+--What is the total number of clothes? 
+SELECT SUM(quantity) from clothes;
+
+--Which items are made of cotton?  
+SELECT name, material FROM clothes WHERE material = "cotton" ORDER BY name asc;
